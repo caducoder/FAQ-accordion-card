@@ -20,24 +20,31 @@ body{
     display: flex;
     border-radius: 15px;
     padding: 30px;
-    width: 900px;
+    width: min-content;
     overflow: hidden;
     background-color: white;
     background-image: url(./images/bg-pattern-desktop.svg);
-    background-position: left -500px top -290px;
+    background-position: left -570px top -290px;
     background-repeat: no-repeat;
     font-family: 'Kumbh Sans', sans-serif;
 }
 
 #woman{
     position: relative;
-    left: -60px;
+    left: -115px;
+    top: 35px;
 }
 
 #box{
-    position: absolute;
-    left: 5px;
-    top: 280px;
+    /* resolver esse problema aqui*/
+    position: sticky;
+    left: -50px;
+    top: -100px;
+
+}
+
+#imgs{
+    height: 420px;
 }
 
 hr{
@@ -46,11 +53,27 @@ hr{
 
 .questions{
     padding: 20px;
-    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.answer{
+    display: none;
+    color: hsl(240, 6%, 50%);
 }
 
 .arrow{
     float: right;
+    padding: 5px;
+}
+
+.arrowopen{
+    transform: rotate(180deg);
+}
+
+.qtn{
+    color: hsl(237, 12%, 33%);
+    width: 400px;
+    margin: 25px 0px 25px 0px;
 }
 
 .arrflex p{
