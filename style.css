@@ -21,61 +21,80 @@ body{
     border-radius: 15px;
     padding: 30px;
     width: min-content;
-    overflow: hidden;
     background-color: white;
-    background-image: url(./images/bg-pattern-desktop.svg);
-    background-position: left -570px top -290px;
+    background-image: url(./images/bg-pattern-desktop.svg), url(./images/illustration-woman-online-desktop.svg);
+    background-position: left -570px top -290px, left -83px top 65px;
     background-repeat: no-repeat;
     font-family: 'Kumbh Sans', sans-serif;
-}
-
-#woman{
-    position: relative;
-    left: -115px;
-    top: 35px;
+    box-shadow: 0px 5px 30px #444;
 }
 
 #box{
-    /* resolver esse problema aqui*/
-    position: sticky;
-    left: -50px;
-    top: -100px;
-
+    position: relative;
+    left: -125px;
+    top: 170px;
 }
 
 #imgs{
     height: 420px;
+    width: 476px;
 }
 
 hr{
+    margin: 10px 0px 10px 0px;
     border-color: hsl(240, 5%, 91%);
 }
 
-.questions{
+.accordion{
     padding: 20px;
     margin-right: 50px;
 }
 
-.answer{
-    display: none;
-    color: hsl(240, 6%, 50%);
+.accordion .contentBx{
+    color: hsl(237, 12%, 33%);
+    width: 400px;
+    margin: 10px 20px;
+    position: relative;
 }
 
-.arrow{
-    float: right;
+.accordion .contentBx .label{
+    position: relative;
+    cursor: pointer;
+}
+
+.accordion .contentBx .label:hover{
+    color: rgb(197, 119, 17);
+}
+
+.accordion .contentBx .label::before{
+    content: url(./images/icon-arrow-down.svg);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+
+.contentBx.active .label::before{
+    content: url(./images/icon-arrow-down.svg);
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+
+.contentBx .content{
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+
+.contentBx.active .content{
+    height: auto;
     padding: 5px;
 }
 
-.arrowopen{
-    transform: rotate(180deg);
-}
-
-.qtn{
-    color: hsl(237, 12%, 33%);
-    width: 400px;
-    margin: 25px 0px 25px 0px;
-}
-
-.arrflex p{
-    display: inline;
+.contentBx.active .label{
+    font-weight: 700;
+    transition: 0.5s;
 }
