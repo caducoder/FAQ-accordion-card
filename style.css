@@ -5,9 +5,13 @@
 }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-body{
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,11 +20,13 @@ body{
     background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 
+/* OK */
 .container{
-    display: flex;
+    position: relative;
     border-radius: 15px;
     padding: 30px;
     width: min-content;
+    height: 510px;
     background-color: white;
     background-image: url(./images/bg-pattern-desktop.svg), url(./images/illustration-woman-online-desktop.svg);
     background-position: left -570px top -290px, left -83px top 65px;
@@ -30,30 +36,30 @@ body{
 }
 
 #box{
-    position: relative;
-    left: -125px;
-    top: 170px;
+    position: absolute;
+    left: -90px;
+    top: 200px;
 }
 
-#imgs{
-    height: 420px;
-    width: 476px;
+#title{
+    margin-bottom: 30px;
 }
 
 hr{
-    margin: 10px 0px 10px 0px;
-    border-color: hsl(240, 5%, 91%);
+    margin: 20px 0px 20px 0px;
+    border-color: hsl(240, 100%, 99%);
 }
 
 .accordion{
-    padding: 20px;
+    margin-top: 20px;
+    margin-left: 450px;
     margin-right: 50px;
 }
 
 .accordion .contentBx{
     color: hsl(237, 12%, 33%);
     width: 400px;
-    margin: 10px 20px;
+    
     position: relative;
 }
 
@@ -63,7 +69,7 @@ hr{
 }
 
 .accordion .contentBx .label:hover{
-    color: rgb(197, 119, 17);
+    color: rgb(197, 115, 7);
 }
 
 .accordion .contentBx .label::before{
@@ -71,8 +77,8 @@ hr{
     position: absolute;
     top: 50%;
     right: 20px;
-    transform: translateY(-50%);
     transition: 0.5s;
+    transform: translateY(-50%);
 }
 
 .contentBx.active .label::before{
@@ -97,4 +103,15 @@ hr{
 .contentBx.active .label{
     font-weight: 700;
     transition: 0.5s;
+}
+
+@media screen and (max-width:375px){
+    .container{
+        width: 300px;
+        background-image: url(./images/bg-pattern-mobile.svg);
+        background-position: left 35px top 0px;
+        height: 500px;
+        padding: 9px;
+    }
+
 }
