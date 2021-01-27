@@ -46,7 +46,7 @@ body{
 }
 
 hr{
-    margin: 20px 0px 20px 0px;
+    margin: 15px 0px 15px 0px;
     border-color: hsl(240, 100%, 99%);
 }
 
@@ -56,23 +56,23 @@ hr{
     margin-right: 50px;
 }
 
-.accordion .contentBx{
+.accordion .label{
     color: hsl(237, 12%, 33%);
     width: 400px;
     
     position: relative;
 }
 
-.accordion .contentBx .label{
+.accordion .label{
     position: relative;
     cursor: pointer;
 }
 
-.accordion .contentBx .label:hover{
-    color: rgb(197, 115, 7);
+.accordion .label:hover{
+    color: hsl(14, 88%, 65%);
 }
 
-.accordion .contentBx .label::before{
+.accordion .label::before{
     content: url(./images/icon-arrow-down.svg);
     position: absolute;
     top: 50%;
@@ -81,37 +81,32 @@ hr{
     transform: translateY(-50%);
 }
 
-.contentBx.active .label::before{
+.label.active::before{
     content: url(./images/icon-arrow-down.svg);
     transform: rotate(180deg);
     transition: 0.5s;
 }
 
-.contentBx .content{
+.content{
     position: relative;
     height: 0;
-    overflow: hidden;
     transition: 0.5s;
     overflow-y: auto;
+    color: hsl(240, 6%, 50%);
+    padding-top: 10px;
+    overflow: hidden;
 }
 
-.contentBx.active .content{
-    height: auto;
-    padding: 5px;
+.content.show{
+    height: 67px;
+    transition: 0.5s;
+    overflow: hidden;
 }
 
-.contentBx.active .label{
+.label.active{
     font-weight: 700;
     transition: 0.5s;
 }
 
 @media screen and (max-width:375px){
-    .container{
-        width: 300px;
-        background-image: url(./images/bg-pattern-mobile.svg);
-        background-position: left 35px top 0px;
-        height: 500px;
-        padding: 9px;
-    }
-
 }
