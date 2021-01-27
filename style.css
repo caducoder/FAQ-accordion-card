@@ -27,7 +27,7 @@ body{
     padding: 30px;
     width: min-content;
     height: 510px;
-    background-color: white;
+    background-color: #fff;
     background-image: url(./images/bg-pattern-desktop.svg), url(./images/illustration-woman-online-desktop.svg);
     background-position: left -570px top -290px, left -83px top 65px;
     background-repeat: no-repeat;
